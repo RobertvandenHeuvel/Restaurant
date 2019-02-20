@@ -7,20 +7,24 @@ public class Restaurant{
 		Bestelling bestelling = new Bestelling();
 		bestelling.bestelling = "stampot";
 		bestelling.controleren();
-		Chef chef = new Chef();
-		chef.koken();
-		gast.afrekenen();
-		// de gast bestelt
+		gast.bestellen(bestelling);
 		//de ober geeft de bestelling door aan de chef
-		//de chef kookt
-		// de gast rekent af
+		Chef chef = new Chef();
+		chef.koken(bestelling);
+		gast.afrekenen();
+
+
+
 	}
 }
 class Gast{
 	String naam;
 	int geld;
 	//methode bestelling
-	Bestelling bestelling1;
+	void bestellen(Bestelling bestelling1){
+		
+		System.out.println("bestelling is " + bestelling1.bestelling);
+	}
 	void afrekenen(){
 		if (geld<10) {
 		System.out.println("Niet genoeg geld.");
@@ -44,13 +48,15 @@ class Bestelling{
 class Ober{
 // neemt bestelling eten (has Bestelling)
 // methode geeft bestelling aan chef
-// methode rekent af met geld
 }
 class Chef{
-	void koken(){
-		System.out.println("koken werkt");
+	//ingredienten
+	void koken(Bestelling bestelling1){
+		if (bestelling1.controleren = true) {
+		System.out.println("De chef maakt stampot.");
+		}else {
+			System.out.println("De chef maakt het verkeerde gerecht!");
+		}
 	}
-	// has Bestelling
-// heeft ingredienten
-// methode kookt eten
+
 }
