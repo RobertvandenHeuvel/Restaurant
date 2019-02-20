@@ -47,7 +47,7 @@ class Bestelling{
 }
 class Ober{
 	void doorgeven(Bestelling bestelling1){
-		if (bestelling1.controleren = true) {
+		if (bestelling1.controleren == true) {
 			System.out.println("De ober geeft de bestelling door aan de chef.");
 		}else {
 			System.out.println("De bestelling wordt verkeerd doorgegeven.");
@@ -59,7 +59,7 @@ class Chef{
 	String ingredient2 = "boerenkool";
 	String ingredient3 = "rookworst";
 	void koken(Bestelling bestelling1){
-		if (bestelling1.controleren = true) {
+		if (bestelling1.controleren == true) {
 		System.out.println("De chef maakt stampot met " + ingredient1 + ", "+ ingredient2 + ", en " + ingredient3 + ".");
 		}else {
 			System.out.println("De chef maakt het verkeerde gerecht!");
