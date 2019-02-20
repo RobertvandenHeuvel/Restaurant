@@ -5,7 +5,7 @@ public class Restaurant{
 		gast.naam = "Piet";
 		gast.geld = 15;
 		gast.bestelling1 = new Bestelling();
-		gast.bestelling1.bestelling = "stamot";
+		gast.bestelling1.bestelling = "stampot";
 		gast.bestellen(gast.bestelling1);
 		gast.bestelling1.controleren();
 		Ober ober = new Ober();
